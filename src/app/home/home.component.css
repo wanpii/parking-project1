@@ -17,5 +17,25 @@
 }
 .LogoImage{
     max-width:90px;
-    margin-left:80px;
+    margin-left:40%;
+}
+.MenuSelect:hover{
+    background-color:white;
+    color:black;
+}
+.MenuSelect {
+  color: black;
+}
+.active .MenuSelected {
+  background-color: black;
+}
+.MenuSelectHeader {
+  background-color: white;
+  width: 109%;
+  margin-left: -15px;
+  height: 100px;
+  margin-top: 0px;
+}
+.col-sm-3 sidenav hidden-xs{
+
 }
