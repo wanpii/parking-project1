@@ -5,9 +5,8 @@
     <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
     <p id="profile-name" class="profile-name-card"></p>
     <form class="form-signin" #f="ngForm">
-      <span id="reauth-email" class="reauth-email"></span>
-      <input type="email" email name="email" ngModel  #email="ngModel" class="form-control" placeholder="Email address" required>
-      <p *ngIf="!email.valid && email.touched">Please enter valid email</p>
+      <span id="reauth-username" class="reauth-username"></span>
+      <input type="text" username name="username" [(ngModel)]="username" class="form-control" placeholder="username" required>
       <input type="password" password name="password" [(ngModel)]="password" class="form-control" placeholder="Password" required>
       <div id="remember" class="checkbox">
         <label>

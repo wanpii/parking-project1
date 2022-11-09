@@ -8,14 +8,15 @@ import { Router } from '@angular/router';
 })
 export class LoginPageComponent implements OnInit {
   password = '';
-  email = '';
+  username = '';
 
   constructor(private router: Router) { }
-  ngOnInit(): void {
+  ngOnInit(): void {  
   }
   onSubmit() {
-    if(this.email === 'admin' && this.password === 'admin') {
+    if(this.username == 'admin' && this.password == 'admin') {
       this.router.navigate(['/home'])
+      console.log('working')
     }
   }
 }
