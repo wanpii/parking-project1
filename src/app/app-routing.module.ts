@@ -8,7 +8,7 @@ const appRoutes: Routes = [
     {path: '', redirectTo: 'login', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
     {path: 'login', component: LoginPageComponent},
-    {path: 'profile:id',component: ProfilePageComponent}
+    {path: 'profile/:id',component: ProfilePageComponent}
 ]
 
 @NgModule({
