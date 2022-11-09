@@ -100,7 +100,7 @@ body, html {
 }
 
 .form-signin .form-control:focus {
-  border-color: rgb(104, 145, 162);
+  border-color: black;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
@@ -108,7 +108,7 @@ body, html {
 
 .btn.btn-signin {
   /*background-color: #4d90fe; */
-  background-color: rgb(104, 145, 162);
+  background-color: black;
   /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
   padding: 0px;
   font-weight: 700;
@@ -127,8 +127,10 @@ body, html {
   .btn.btn-signin:hover,
   .btn.btn-signin:active,
   .btn.btn-signin:focus{
-    background-color: rgb(12, 97, 33);
+    background-color: white;
     cursor:pointer;
+    color:black;
+    border:black 2px solid;
   }
   input.ng-valid.ng-touched{
     border: 1px solid green;
@@ -137,6 +139,8 @@ body, html {
     border: 1px solid red;
   }
   .btn.btn-signin:disabled {
-    background-color: rgb(104, 145, 162);
+    background-color: gray;
     cursor:default;
+    border:none;
+    color:white;
   }

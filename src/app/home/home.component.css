@@ -45,6 +45,8 @@
 .content {
   background-image: url(https://wallpapercrafter.com/desktop/95116-abstract-dark-black-minimalism-minimalist-hd-4k.jpg)
 }
-/*.TitelH1 {
-  background-image: url(https://img.freepik.com/vektoren-kostenlos/weisser-abstrakter-hintergrund_23-2148806276.jpg?w=2000)
-}*/
+.col-sm-3 .well:hover {
+  margin-top: -7px;
+  background-color: black;
+  color: white;
+}
