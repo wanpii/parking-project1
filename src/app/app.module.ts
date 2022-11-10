@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { RegistrationPageComponent } from './registration-page/registration-page
     HomeComponent,
     ProfilePageComponent,
     RegistrationPageComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
