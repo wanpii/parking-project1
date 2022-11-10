@@ -12,5 +12,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  alertPark() {
+    confirm("Do you want to reserve this parking space?")
+  }
 }
