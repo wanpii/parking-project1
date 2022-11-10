@@ -1,4 +1,6 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 
@@ -8,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registration-page.component.css']
 })
 export class RegistrationPageComponent implements OnInit {
-
+  constructor(private router:Router) {}
   ngOnInit() {
   }
   
-  
+   onSubmit() {
+    this.router.navigate(['/login'])
+   }
 }
