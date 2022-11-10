@@ -6,7 +6,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 
 @NgModule({
@@ -21,7 +21,9 @@ import { RegistrationPageComponent } from './registration-page/registration-page
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
