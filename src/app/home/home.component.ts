@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../services/api.service';
+
 
 @Component({
   selector: 'app-home',
@@ -8,13 +8,9 @@ import { ApiService } from '../services/api.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private dataService: ApiService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-  logout()
-  {
-  this.dataService.deleteToken();
-  window.location.href = window.location.href;
-  }
+
 }

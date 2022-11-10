@@ -1,19 +1,41 @@
 
-<div class="container">
+<div class="container" *ngIf="loggedIn; else tryAgain">
   <div class="card card-container">
     <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
     <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
     <p id="profile-name" class="profile-name-card"></p>
-    <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off">
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
       <span id="reauth-username" class="reauth-username"></span>
-      <input type="text" username name="username" formControlName="username" class="form-control" placeholder="username">
-      <input type="password" password name="password" formControlName="password" class="form-control" placeholder="Password" required>
+      <input type="text" name="username" [(ngModel)]="username" class="form-control" placeholder="username" required >
+      <input type="password" name="password" [(ngModel)]="password" class="form-control" placeholder="Password" required>
       <div id="remember" class="checkbox">
         <label>
           <input type="checkbox" value="remember-me"> Remember me
         </label>
       </div>
-      <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" [disabled]="">Sign in</button>
+      <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" [disabled]="!f.valid">Sign in</button>
     </form><!-- /form -->
   </div><!-- /card-container -->
 </div><!-- /container -->
+
+<ng-template #tryAgain>
+  <div class="container">
+    <div class="card card-container">
+      <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+      <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+      <p id="profile-name" class="profile-name-card"></p>
+      <form class="form-signin" #f="ngForm" (ngSubmit)="onSubmit()">
+        <span id="reauth-username" class="reauth-username"></span>
+        <p>Wrong username/password</p>
+        <input type="text" name="username" [(ngModel)]="username" class="form-control" placeholder="username" required >
+        <input type="password" name="password" [(ngModel)]="password" class="form-control" placeholder="Password" required>
+        <div id="remember" class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" [disabled]="!f.valid">Sign in</button>
+      </form><!-- /form -->
+    </div><!-- /card-container -->
+</div>
+</ng-template>
