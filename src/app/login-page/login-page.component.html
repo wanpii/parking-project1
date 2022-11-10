@@ -6,18 +6,18 @@
     <p id="profile-name" class="profile-name-card"></p>
     <form #f="ngForm" (ngSubmit)="onSubmit()">
       <span id="reauth-username" class="reauth-username"></span>
-      <input type="text" name="username" [(ngModel)]="username" class="form-control" placeholder="username" required >
+      <input type="text" name="username" [(ngModel)]="username" class="form-control" placeholder="username" required>
       <br>
       <input type="password" name="password" [(ngModel)]="password" class="form-control" placeholder="Password" required>
       <div id="remember" class="checkbox">
         <label>
           <input type="checkbox" value="remember-me"> Remember me
-          <p routerLink="/register">Register</p>
         </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" [disabled]="!f.valid">Sign in</button>
-    </form><!-- /form -->
-  </div><!-- /card-container -->
+      <button class="btn-register" type="submit" routerLink="/register">Register</button>
+  </form><!-- /form -->
+</div><!-- /card-container -->
 </div><!-- /container -->
 
 <ng-template #tryAgain>
@@ -29,7 +29,7 @@
       <form class="form-signin" #f="ngForm" (ngSubmit)="onSubmit()">
         <span id="reauth-username" class="reauth-username"></span>
         <p>Wrong username/password</p>
-        <input type="text" name="username" [(ngModel)]="username" class="form-control" placeholder="username" required >
+        <input type="text" name="username" [(ngModel)]="username" class="form-control" placeholder="username" required>
         <input type="password" name="password" [(ngModel)]="password" class="form-control" placeholder="Password" required>
         <div id="remember" class="checkbox">
           <label>
@@ -37,6 +37,7 @@
           </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" [disabled]="!f.valid">Sign in</button>
+        <button class="btn-register" type="submit" routerLink="/register">Register</button>
       </form><!-- /form -->
     </div><!-- /card-container -->
 </div>
