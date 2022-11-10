@@ -1,47 +1,47 @@
 <div class="container">
-    <form>
+    <form #f="ngForm">
     <label>
         <p class="label-txt">ENTER YOUR EMAIL</p>
-        <input type="email" class="input" formControlName="email" autocomplete="off" name="email" required>
+        <input type="email" class="input" ngModel name="email" autocomplete="off" name="email" required>
         <!-- <div class="line-box">
         <div class="line"></div>
         </div> -->
     </label>
     <label>
         <p class="label-txt">ENTER YOUR USERNAME</p>
-        <input type="text" class="input" formControlName="username" autocomplete="off" name="username" required>
+        <input type="text" class="input" ngModel name="username" autocomplete="off" name="username" required>
         <!-- <div class="line-box">
         <div class="line"></div>
         </div> -->
     </label>
     <label>
         <p class="label-txt">ENTER YOUR FIRST NAME</p>
-        <input type="text" class="input" formControlName="firstName" autocomplete="off" name="firstName" required>
+        <input type="text" class="input" ngModel name="firstName" autocomplete="off" name="firstName" required>
         <!-- <div class="line-box">
         <div class="line"></div>
         </div> -->
     </label>
     <label>
         <p class="label-txt">ENTER YOUR LAST NAME</p>
-        <input type="text" class="input" formControlName="lastName" autocomplete="off" name="lastName" required>
+        <input type="text" class="input" ngModel name="lastName" autocomplete="off" name="lastName" required>
         <!-- <div class="line-box">
         <div class="line"></div>
         </div> -->
     </label>
     <label>
         <p class="label-txt">ENTER YOUR PLATE NUMBER</p>
-        <input type="text" class="input" formControlName="plateNumber" autocomplete="off" name="plateNumber" required>
+        <input type="text" class="input" ngModel name="plateNumber" autocomplete="off" name="plateNumber" required>
         <!-- <div class="line-box">
         <div class="line"></div>
         </div> -->
     </label>
     <label>
         <p class="label-txt">ENTER YOUR PASSWORD</p>
-        <input type="password" class="input" formControlName="password" autocomplete="off" name="password" required>
+        <input type="password" class="input" ngModel name="password" autocomplete="off" name="password" required>
         <!-- <div class="line-box">
         <div class="line"></div>
         </div> -->
     </label>
-    <button class="btn-register" type="submit" [disabled]="">Register</button>
+    <button class="btn-register" type="submit" (click)="onSubmit()" [disabled]="!f.valid">Register</button>
     </form>
 </div>
