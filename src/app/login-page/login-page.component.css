@@ -160,3 +160,7 @@ body, html {
   color:black;
   border:black 2px solid;
 }
+.ContainerWraper {
+  height: 929px;
+  background-image: url(https://img.freepik.com/vektoren-kostenlos/weisser-abstrakter-hintergrund_23-2148806276.jpg?w=2000)
+}
