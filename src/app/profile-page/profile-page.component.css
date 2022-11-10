@@ -5,7 +5,7 @@ body{
 .emp-profile {
   padding: 7%;
   border-radius: 0.5rem;
-  background: white;
+  background: rgb(255, 255, 255);
   border: black solid;
 }
 .Pagecontainer {
