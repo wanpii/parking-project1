@@ -2,7 +2,7 @@
   <form #f="ngForm">
     <label>
       <p class="label-txt">ENTER YOUR EMAIL</p>
-      <input type="email" class="input" ngModel name="email" autocomplete="off" name="email" required>
+      <input type="email" class="input" #email="ngModel" ngModel name="email" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  required>
       <!-- <div class="line-box">
       <div class="line"></div>
       </div> -->
