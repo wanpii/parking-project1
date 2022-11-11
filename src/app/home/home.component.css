@@ -59,3 +59,7 @@
   border-radius: 20px;
   background-image: url(https://img.freepik.com/vektoren-kostenlos/weisser-abstrakter-hintergrund_23-2148806276.jpg?w=2000);
 }
+
+.well {
+  border-radius: 15px;
+}
